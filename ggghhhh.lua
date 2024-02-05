@@ -96,6 +96,21 @@ function AllowRunServiceBind.OnInvoke(args)
     elseif args == "OFF" then
         AllowRunService = false
     end
+    spawn(function() 
+    repeat
+        task.wait()
+    until game:IsLoaded()
+    repeat
+        task.wait()
+    until game.Players
+    repeat
+        task.wait()
+    until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
+    wait(1.5)
+    require(game.ReplicatedStorage.Notification).new("<Color=Red> Welcome To LI XI Hub <Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>MAKE LIXI HUB BY PHU KHANH<Color=/>"):Display()
+end)
+----------------------------------------------------------------------------------------------------------------------------------------------
     local CoreGui = game:GetService("StarterGui")
     CoreGui:SetCore("SendNotification", {
         Title = "Chest Farm",
@@ -107,6 +122,21 @@ function AllowRunServiceBind.OnInvoke(args)
         Button2 = "OFF",
     })
 end
+spawn(function() 
+    repeat
+        task.wait()
+    until game:IsLoaded()
+    repeat
+        task.wait()
+    until game.Players
+    repeat
+        task.wait()
+    until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
+    wait(1.5)
+    require(game.ReplicatedStorage.Notification).new("<Color=Red> Welcome To LI XI Hub <Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>MAKE LIXI HUB BY PHU KHANH<Color=/>"):Display()
+end)
+----------------------------------------------------------------------------------------------------------------------------------------------
 
 
 task.spawn(function()
@@ -146,6 +176,21 @@ CoreGui:SetCore("SendNotification", {
     Button1 = "ON",
     Button2 = "OFF",
 })
+spawn(function() 
+    repeat
+        task.wait()
+    until game:IsLoaded()
+    repeat
+        task.wait()
+    until game.Players
+    repeat
+        task.wait()
+    until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
+    wait(1.5)
+    require(game.ReplicatedStorage.Notification).new("<Color=Red> Welcome To LI XI Hub <Color=/>"):Display()
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>MAKE LIXI HUB BY PHU KHANH<Color=/>"):Display()
+end)
+----------------------------------------------------------------------------------------------------------------------------------------------
 task.spawn(function()
     while true and task.wait(.5) do
         if AllowRunService == true then
